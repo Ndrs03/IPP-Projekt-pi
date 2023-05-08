@@ -17,7 +17,7 @@ def start_record():
 	writer = cv2.VideoWriter(filename, cv2.VideoWriter_fourcc(*'mp4v'), 30, (width, height))
 
 
-	end_time = time.time() + RECORD_TIME  # 5sek
+	end_time = time.time() + RECORD_TIME  
 	while time.time() < end_time:
 		ret, frame = cap.read()
 		writer.write(frame)
