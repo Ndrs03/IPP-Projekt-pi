@@ -44,7 +44,7 @@ def upload_file():
         files = None
 
 def upload_csv():
-    # csv filen i Drive
+    # csv filen i Drive, CreateFile skapar bara en referens till filen i drive den skapar alltså inen ny fil
     files= drive.CreateFile({'id': "1oZfNOB2n13Qu0NFPbg4NhCeftRPKrisx"})
     files.SetContentFile(csv_file)
     files.Upload()
