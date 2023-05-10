@@ -7,6 +7,7 @@ from datetime import datetime
 
 
 def start_record(record_time):
+	print ("Recording")
 	cap = cv2.VideoCapture(0)  
 	
 	fps = 15

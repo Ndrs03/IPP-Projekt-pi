@@ -11,7 +11,7 @@ gauth = GoogleAuth()
   
 # Creates local webserver and auto
 # handles authentication.
-gauth.LocalWebserverAuth()       
+gauth.CommandLineAuth()       
 drive = GoogleDrive(gauth)
    
 # mappen vi laddar upp från
@@ -26,6 +26,7 @@ folder = "1yUN6WLTOArxmyBChM1uaiaTgh3bMZ1Vc"
 
 
 def upload_file():
+        
     # iterating thought all the files/folder
     # of the desired directory
     for x in os.listdir(path):        
