@@ -5,7 +5,7 @@ import record
 
 while input("Sensor? ") != 'n':
 	record.start_record(10)
-	#stats.update_csv()
+	stats.update_csv()
 	#upload.upload_file()
 
 
