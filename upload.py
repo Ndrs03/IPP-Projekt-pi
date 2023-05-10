@@ -17,6 +17,9 @@ drive = GoogleDrive(gauth)
 # mappen vi laddar upp från
 path = os.getcwd() + "/files_to_upload/"   
 
+# csv filen vi laddar upp
+csv_file = os.getcwd() + "/stats.csv"
+
 # mappens id som vi laddar upp till
 folder = "1yUN6WLTOArxmyBChM1uaiaTgh3bMZ1Vc"
  
@@ -26,8 +29,6 @@ def upload_file():
     # iterating thought all the files/folder
     # of the desired directory
     for x in os.listdir(path):        
-        
-
         filename = os.path.join(path, x)
         files= drive.CreateFile({'parents' : [{'id' : folder}], 'title' : x})
         files.SetContentFile(filename)
@@ -42,3 +43,9 @@ def upload_file():
         # deletion
         files = None
 
+def upload_csv():
+    # csv filen i Drive
+    files= drive.CreateFile({'id': "1oZfNOB2n13Qu0NFPbg4NhCeftRPKrisx"})
+    files.SetContentFile(csv_file)
+    files.Upload()
+    files = None
